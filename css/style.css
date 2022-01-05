@@ -1,22 +1,6 @@
+/*alla*/
 *{
   margin:0;
-  
-}
-
-#container{
-  display:grid;
-  height: 100vh;
-  grid-template-columns: 6fr 2fr;
-  grid-template-rows: 2fr 10fr 0.75fr;
-  grid-template-areas:
-  "hd nv"
-  "sc sc"
-  "ft ft";
-}
-
-header {
-  grid-area: hd;
-  background-color: rgba(0, 0, 0, 0.705);
 }
 
 nav{
@@ -27,54 +11,328 @@ nav{
   background-color: rgba(0, 0, 0, 0.705);
 }
 
-#meny{
+.meny{
+  text-align: center;
   order: 0;
   height: 70%;
   width: 40%;
   align-self: center;
-  background-color: rgb(234, 231, 175);
 }
 
-#omoss{
+.omoss{
+  text-align: center;
   order: 0;
   height: 70%;
   width: 40%;
   align-self: center;
-  background-color: rgb(234, 231, 175);
 }
 
-section{
+.navtext{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  color: rgb(250, 212, 112);
+  text-decoration: none;
+}
+
+footer{
+  font-family: calibri, sans-serif;
+  font-size: 15px;
+  color: rgb(250, 212, 112, 0.7);
+  grid-area: ft;
+  background-color: rgba(0, 0, 0, 0.705);
+  min-height: 35px;
+  line-height: 35px;
+}
+
+.header{
+  grid-area: hd;
+  background-color: rgba(75, 75, 75);
+  display: flex;
+  align-items: center;
+  min-height: 100px
+}
+
+.logo{
+  width: 100%;
+}
+
+/*huvudsida*/
+#container{
+  display:grid;
+  height: 100vh;
+  grid-template-columns: 6fr 3fr;
+  grid-template-rows: 2fr 10fr 0.75fr;
+  grid-template-areas:
+  "hd nv"
+  "sc sc"
+  "ft ft";
+}
+
+#sectionhome{
   grid-area: sc;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /*background-color: deeppink; */
   background-image: url(../img/background.jpg);
 }
 
-.article1{
+#article1{
   order: 0;
   height: 85%;
   width: 45%;
   align-self: center;
   background-color: rgba(167, 38, 147, 0.5);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.article2{
+#article2{
   order: 1;
   height: 85%;
   width: 45%;
   align-self: center;
   background-color: rgba(167, 38, 147, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-footer{
-  grid-area: ft;
-  background-color: rgba(0, 0, 0, 0.705);
+#korv{
+  order: 0;
+  height: 30%;
+  width: 90%;
 }
 
+#hamburgare{
+  order: 1;
+  height: 30%;
+  width: 90%;
+}
 
-/*  background-color: rgba(255, 136, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.705);
-  background-color: rgb(168, 0, 168);
-  background-color: rgb(248, 212, 112);
+#köttbullar{
+  order: 2;
+  height: 30%;
+  width: 90%;
+}
+
+#review1{
+  order: 0;
+  height: 30%;
+  width: 90%;
+}
+
+#review2{
+  order: 1;
+  height: 30%;
+  width: 90%;
+}
+
+#review3{
+  order: 2;
+  height: 30%;
+  width: 90%;
+}
+
+/*meny*/
+#containermeny{
+  display:grid;
+  height: 200vh;
+  grid-template-columns: 6fr 3fr;
+  grid-template-rows: 2fr 23fr 0.75fr;
+  grid-template-areas:
+  "hd nv"
+  "sc sc"
+  "ft ft";
+}
+
+#sectionmeny{
+  grid-area: sc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url(../img/backgroundtall.jpg);
+}
+
+.mat{
+  background-color: rgba(167, 38, 147, 0.5);
+  height: 13%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-height: 200px;
+
+}
+
+#korv1{
+  order: 0;
+}
+
+#korv2{
+  order: 1;
+}
+
+#burgare1{
+  order: 2;
+}
+
+#burgare2{
+  order: 3;
+}
+
+#bullar1{
+  order: 4;
+}
+
+#bullar2{
+  order: 5;
+}
+
+.bild{
+  order: 0;
+  height: 85%;
+}
+
+.text{
+  order: 1;
+  width: 70%;
+  height: 85%;
+  font-family: calibri, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  border: 2.5px solid black;
+}
+
+/*om oss*/
+#containeromoss{
+  display:grid;
+  height: 100vh;
+  grid-template-columns: 6fr 3fr;
+  grid-template-rows: 2fr 10fr 0.75fr;
+  grid-template-areas:
+  "hd nv"
+  "sc sc"
+  "ft ft";
+}
+
+#sectionomoss{
+  grid-area: sc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-image: url(../img/background.jpg);
+  max-height: 442px;
+}
+
+#chef{
+  order: 0;
+  height: 85%;
+  width: 35%;
+  align-self: center;
+  background-color: rgba(167, 38, 147, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#chefbild{
+  order: 0;
+  height: 30%;
+  width: 90%;
+}
+
+#cheftext{
+  order: 1;
+  /*background-color: rgb(214, 116, 199);*/
+  width: 90%;
+  height: 60%;
+  font-family: calibri, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  border: 2.5px solid black;
+}
+
+#annat{
+  order: 0;
+  height: 85%;
+  width: 45%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#arbetare{
+  order: 0;
+  background-color: rgba(167, 38, 147, 0.5);
+  max-height: 200px;
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#killebild{
+  order: 0;
+  height: 70%;
+}
+
+#killetext{
+  order: 1;
+  font-family: calibri, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  border: 2.5px solid black;
+  height: 70%;
+  width: 20%;
+}
+
+#tjejbild{
+  order: 2;
+  height: 70%;
+}
+
+#tjejtext{
+  order: 3;
+  font-family: calibri, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  border: 2.5px solid black;
+  height: 70%;
+  width: 20%;
+}
+
+#allmänt{
+  order: 1;
+  background-color: rgba(167, 38, 147, 0.5);
+  height: 45%;
+  width: 100%;
+  display: flex;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#allmänttext{
+  order:0;
+  width: 57%;
+  height: 80%;
+  font-family: calibri, sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  border: 2.5px solid black;
+}
+
+#karta{
+  order: 1;
+  height: 80%;
+  border: 2.5px solid black;
+}
